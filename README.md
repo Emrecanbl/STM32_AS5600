@@ -1,4 +1,5 @@
 AS5600 STM32 Driver
+
 This repository contains a driver for the AS5600 magnetic rotary position sensor, implemented for STM32 microcontrollers. The driver facilitates communication with the AS5600 sensor over I2C and provides functions to read the angle and status information.
 
 Initialization of the AS5600 sensor.
@@ -39,15 +40,24 @@ if (status != HAL_OK) {
 Reading Angle
 To read the angle from the AS5600 sensor, use the AS5600_GetAngle function. This function returns the angle in degrees.
 
-c
-Kodu kopyala
+
 float angle = 0;
+
 HAL_StatusTypeDef status = AS5600_GetAngle(&hAS5600, &angle);
+
 if (status == HAL_OK) {
+   
     printf("Angle: %f degrees\n", angle);
-} else {
+
+} else 
+
+{
+   
     // Handle read error
+
 }
+
+
 Reading Status
 To read the status of the AS5600 sensor, use the AS5600_GetStatus function. This function returns the status register value.
 
