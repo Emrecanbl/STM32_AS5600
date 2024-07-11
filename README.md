@@ -32,8 +32,11 @@ To initialize the AS5600 sensor, call the AS5600_Init function. This function se
 AS5600_HandleTypeDef hAS5600;
 
 HAL_StatusTypeDef status = AS5600_Init(&hAS5600, &hi2c1);
+
 if (status != HAL_OK) {
+
     // Handle initialization error
+
 }
 
 
