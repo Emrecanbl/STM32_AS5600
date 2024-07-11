@@ -8,10 +8,15 @@ Checking the status of the AS5600 sensor.
 
 Hardware Requirements
 STM32 microcontroller (tested with STM32F4 series).
+
 AS5600 magnetic rotary position sensor.
+
 I2C communication interface.
+
 Pull-up resistors for I2C lines (if not already present on your board).
+
 Software Requirements
+
 STM32 HAL library.
 A suitable IDE such as STM32CubeIDE or Keil uVision.
 
