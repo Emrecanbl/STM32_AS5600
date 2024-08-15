@@ -1,33 +1,3 @@
-/*
- * As5600.h
- *
- *  Created on: Jul 10, 2024
- *      Author: EmrecanBl
- *USAGE:
-        // Instantiate an AS5600 structure
-        AS5600_TypeDef *a = AS5600_New();
-
-    // Configure non-default options, if required.
-    a->PositiveRotationDirection = AS5600_DIR_CCW;
-        a->LowPowerMode = AS5600_POWER_MODE_LPM2;
-    a->OutputStage = AS5600_OUTPUT_STAGE_PWM;
-    a->PWMFrequency = AS5600_PWM_FREQUENCY_460HZ;
-    a->Watchdog = AS5600_WATCHDOG_OFF;
-
-    // Initialize AS5600 with selected options and check for initialization
-errors.
-    if(AS5600_Init(a) != HAL_OK){
-        _Error_Handler(__FILE__, __LINE__);
-    }
-
-    // Read angular measurements
-    uint16_t angle = 0;
-    while(1){
-        AS5600_GetAngle(a, &angle);
-        printf("Angle = %ld degrees.\n", angle);
-    }
- *
- */
 
 #ifndef INC_AS5600_H_
 #define INC_AS5600_H_
